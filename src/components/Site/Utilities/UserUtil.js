@@ -3,7 +3,7 @@
 // I sure as hell aint changing every link once I deploy to netlify
 export function BaseURL(route){
     return(
-        `https://young-stream-12773.herokuapp.com/${route}`
+        `https://soulys.herokuapp.com/${route}`
     )
 }
 // Grabs Username/Password/Avatar Data 
