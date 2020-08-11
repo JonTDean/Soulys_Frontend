@@ -1,0 +1,21 @@
+.profileImage{
+    max-height: 6em;
+    max-width: 6em;
+  }
+
+.gameContainer{
+    // display: inline;
+    // justify-content: center;
+    // text-align: center;
+    padding-bottom: 1em;
+    // height: 720px;
+    // max-height: 720px;
+    min-height: 720px;
+    // width: 1280px;
+    // max-width: 1280px;
+    min-width: 1280px;
+}
+
+canvas{
+  margin-top: 40px !important;
+}
