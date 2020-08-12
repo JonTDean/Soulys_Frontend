@@ -3,7 +3,8 @@
 // I sure as hell aint changing every link once I deploy to netlify
 export function BaseURL(route){
     return(
-        `https://localhost:3000/${route}`
+        // `http://localhost:3000/${route}` // For Localhost
+        `http://soulys.herokuapp.com/${route}`
     )
 }
 // Grabs Username/Password/Avatar Data 

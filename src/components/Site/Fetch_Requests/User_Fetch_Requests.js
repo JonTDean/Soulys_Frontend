@@ -88,6 +88,7 @@ export function handleDeleteUser(e, token, logout){
             "Authorization": `Bearer ${token}`
         }
     })
+    .then(resp => resp.json())
     .then(console.log)
 
     return logout;
