@@ -4,7 +4,7 @@
 export function BaseURL(route){
     return(
         // `http://localhost:3000/${route}` // For Localhost
-        `http://soulys.herokuapp.com/${route}`
+        `https://soulys.herokuapp.com/${route}`
     )
 }
 // Grabs Username/Password/Avatar Data 
