@@ -10,7 +10,6 @@ const initialState = {
     username: '',
     password: '',
     password_confirmation: '',
-    avatar: '',
 }
 
 // Responsible for User SignUp
@@ -38,19 +37,6 @@ export default function SignUpForm(props) {
                     value={username} 
                     placeholder="JohnDoe123" 
                     onChange={ e => handleChange(e, dispatch) }
-                />
-            </Form.Group>
-
-            {/* Avatar */}
-            <img className="profileImage" src={avatar.length ? avatar : profileImageBase} alt={username} />
-            <Form.Group controlId="avatar">
-                <Form.Label>Avatar</Form.Label>
-                <Form.Control
-                    type="text" 
-                    name="avatar" 
-                    autoComplete="off" 
-                    value={avatar} 
-                    onChange={ e => handleChange(e, dispatch) } 
                 />
             </Form.Group>
 

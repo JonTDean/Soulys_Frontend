@@ -16,7 +16,9 @@
     Started Phaser
 
 - [ ] Make Custom Hooks for Scene Switching
+
 - [ ] Start on 3D Model for MC [ Androgynous ] -> Convert to 144f Animation Pixel Art at 256x256
+
 - [ ] Have React handle tracking of Acheivements for current_user_character
 
 

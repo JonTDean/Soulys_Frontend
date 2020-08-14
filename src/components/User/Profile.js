@@ -8,7 +8,6 @@ import { handleUpdateForm, handleDeleteUser } from '../Site/Fetch_Requests/User_
 const initialState = {
     username: '',
     password: '',
-    avatar: '',
 }
 
 // Responsible for User SignUp
@@ -34,18 +33,6 @@ export default function Profile(props){
                     placeholder={currentUser.username} 
                     onChange={ e => handleChange(e, dispatch) }
                     />
-            </Form.Group>
-    
-            {/* Avatar */}
-            <img className="profileImage" src={avatar} alt={`${currentUser.username}'s Avatar`} />
-            <Form.Group controlId="avatar">
-                <Form.Label>Avatar</Form.Label>
-                <Form.Control
-                    type="text" 
-                    name="avatar" 
-                    autoComplete="off" 
-                    onChange={ e => handleChange(e, dispatch) } 
-                />
             </Form.Group>
     
             {/* Password */}
