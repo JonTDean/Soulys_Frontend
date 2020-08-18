@@ -9,7 +9,7 @@ import { handleSignUpForm } from '../Site/Fetch_Requests/User_Fetch_Requests';
 const initialState = {
     username: '',
     password: '',
-    password_confirmation: '',
+    password_confirmation: ''
 }
 
 // Responsible for User SignUp
@@ -18,7 +18,7 @@ export default function SignUpForm(props) {
     const [state, dispatch] = useReducer(reducer, initialState);
 
     // Sets initial states as a destructured Object
-    const { username, password, password_confirmation, avatar } = state 
+    const { username, password, password_confirmation } = state 
 
     return(
         <Form onSubmit={e => handleSignUpForm(e, state, props.handleLogin )}> 

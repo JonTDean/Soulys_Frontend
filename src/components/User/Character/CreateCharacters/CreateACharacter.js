@@ -1,4 +1,5 @@
 import React, { useReducer } from 'react';
+import { withRouter } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { reducer, handleChange } from '../../../Site/Utilities/UserUtil';
@@ -6,15 +7,29 @@ import { handleCharacterCreationForm } from '../../../Site/Fetch_Requests/Charac
 
 // Pseudo State
 const initialState = {
-    characterName: "",
+    characterName: "Soulless",
     characterPhysique: "Masculine", 
 }
 
 function CreateACharacter(props){
     const [state, dispatch] = useReducer(reducer, initialState);
-    // console.log(props.currentUser)
+
+    // Props destructure
+    const { history } = props;
+
+    // Redirects to View
+    function redirectToCharacterMenu(history, e){
+        // Push Data to the Server
+        handleCharacterCreationForm(e, state, props.currentUser.username)
+
+        // If the History Exists then reroute to the specified link
+        if(history){
+            return history.push("/Game/Characters/View");
+        }
+    }
+
     return(
-        <Form onSubmit={e => handleCharacterCreationForm(e, state, props.currentUser.username) } > 
+        <Form onSubmit={ e => redirectToCharacterMenu(history, e)}> 
                 
             {/* Username */}
             <Form.Group controlId="characterName">
@@ -50,4 +65,4 @@ function CreateACharacter(props){
     )
 }
 
-export default CreateACharacter;
+export default withRouter(CreateACharacter);

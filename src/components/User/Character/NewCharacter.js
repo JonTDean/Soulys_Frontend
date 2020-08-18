@@ -10,7 +10,7 @@ function NewCharacter(props){
             <h1>Create a Character</h1>
             <Container>
                 <Row className="text-primary border-3 border-super border-primary">
-                    < CreateACharacter currentUser={ currentUser } />  
+                    <CreateACharacter currentUser={ currentUser } />  
                 </Row>
             </Container>
         </div>

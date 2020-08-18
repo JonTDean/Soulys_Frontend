@@ -1,12 +1,14 @@
 // Basic Utilities to help out
 
-// I sure as hell aint changing every link once I deploy to netlify
+//// I sure as hell aint changing every link once I deploy to netlify
+//// For Localhost
+// `https://soulys.herokuapp.com/${route}`
 export function BaseURL(route){
     return(
-        // `http://localhost:3000/${route}` // For Localhost
-        `https://soulys.herokuapp.com/${route}`
+        `http://localhost:3000/${route}` 
     )
 }
+
 // Grabs Username/Password/Avatar Data 
 export function getUPA(username, password, avatar){
     console.log(`Username: ${username}, Password: ${password}, Avatar: ${avatar}`)

@@ -4,10 +4,7 @@ import { BaseURL } from '../../Site/Utilities/UserUtil';
 export function handleCharacterCreationForm(e, state, username){
     e.preventDefault();
     const {characterName, characterPhysique } = state
-
     console.log(state);
-    // console.log(`Character Name : ${characterName}`);
-    // console.log(`Character Physique: ${characterPhysique}`);
 
     fetch(BaseURL(`profile/new/character`), {
         method: "POST",
@@ -17,9 +14,7 @@ export function handleCharacterCreationForm(e, state, username){
         body:JSON.stringify({
             username: username,
             name: characterName,
-            physique: characterPhysique,
-            level: 1,
-            current_experience: 1,
+            physique: characterPhysique
         })
     })
     .then(resp => resp.json())

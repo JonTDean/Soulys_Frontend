@@ -6,6 +6,8 @@ function ModifyCharacters(props){
     // Destructure Characters out of props
     const characters = props.currentUser.characters;
     
+    console.log(characters);
+    
     // ANTI-SITE BREAKING CODE
     if(characters){
        return (
