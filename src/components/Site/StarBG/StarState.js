@@ -1,7 +1,8 @@
 function StarState() {
     // Sweet spot is 1000
     // If you go past 1000 the animations won't start RIP
-    return [...Array(1000)].map((_, i) => ({
+    // In the Test Environment going to 1000 lags the server
+    return [...Array(100)].map((_, i) => ({
         id: i.toString(),
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,

@@ -28,7 +28,7 @@ class StarField extends Component{
 
 
     componentDidMount(){
-        //// Sets a 2s timer for the stars to turn on and off
+        //// Sets a 1s timer for the stars to turn on and off
         // -> This Coincides with the Maximum randomized duration 
         // -> Each star in mind should be treated as if
         // each one has a dynamic duration from 1-3 Seconds
@@ -39,7 +39,7 @@ class StarField extends Component{
 
     render(){
         return (
-            <Stage width={window.innerWidth} height={window.innerHeight}>
+            <Stage width={window.innerWidth} height={window.innerHeight} className={"StarField"}>
                 <Layer>
                     {this.stars.map((star, index) => (
                         <Spring
@@ -54,7 +54,7 @@ class StarField extends Component{
                             from={{ 
                                 x: star.x,
                                 y: star.y,
-                                stroke: `#${star.color}`,
+                                stroke: `white`,
                                 strokeWidth: 2,
                                 opacity: 1
                             }}

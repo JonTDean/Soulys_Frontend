@@ -11,6 +11,7 @@ import NewCharacter from './components/User/Character/NewCharacter';
 import ModifyCharacters from './components/User/Character/ModifyCharacters/ModifyCharacters';
 import { handleLoginPersist } from './components/Site/Fetch_Requests/User_Fetch_Requests';
 import { currentUserExists } from './components/Site/Utilities/UserUtil';
+import StarField from './components/Site/StarBG/StarField';
 
 class App extends Component {
   state = {
@@ -60,10 +61,15 @@ class App extends Component {
 
     return (
       <>
+      
+        {/* StarField Background */}
+        <StarField />
+
+        {/* NavBar */}
         <NavBar currentUser={ currentUserExists(currentUser) } handleLogout={this.handleLogout} />
 
+        {/* Router Field */}
         <Switch>
-
           {/* Log In Page */}
           <Route exact path="/login">
             <LoginForm handleLogin={this.handleLogin} currentUser={ currentUserExists(currentUser, this.handleLogout) } />
@@ -103,7 +109,6 @@ class App extends Component {
           <Route exact path="/">
             <Home currentUser={ currentUserExists(currentUser, this.handleLogout) } />
           </Route>
-
         </Switch>
       </>
     );

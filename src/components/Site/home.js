@@ -4,7 +4,7 @@ function Home(props){
 
     return(
         <div>
-            {<p> Welcome{props.currentUser.username ? `, ${props.currentUser.username}!` : '!'} </p>}
+            {<p className={"text-primary"}> Welcome{props.currentUser.username ? `, ${props.currentUser.username}!` : '!'} </p>}
         </div>
     )
 

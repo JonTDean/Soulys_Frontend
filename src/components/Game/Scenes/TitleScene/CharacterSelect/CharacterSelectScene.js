@@ -3,7 +3,7 @@ import TestScene from '../../Maps/TestMap/TestScene';
 import { userCharacters } from '../../../Main';
 // Keep these for in bounds logic to reach
 import React from 'react';
-// import Bootstrap from 'bootstrap';
+import Bootstrap from 'bootstrap';
 
 class CharacterSelectScene extends Phaser.Scene{
     
