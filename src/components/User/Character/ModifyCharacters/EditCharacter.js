@@ -5,15 +5,16 @@ import { handleUpdateCharacter } from '../../../Site/Fetch_Requests/Character_Fe
 
 // Pseudo State
 const initialState = {
-    characterName: "",
+    characterName: "Soulless",
     characterPhysique: "Masculine", 
 }
 
 function EditCharacters(props){
     const [state, dispatch] = useReducer(reducer, initialState);
     // const [characterID, setCharacterID] = useState(initialState);
+    state.characterName = props.user.characters.name;
 
-    
+    // console.log(state.characterName)
     return(
         <div>
             <Row className='justify-content-center'>
@@ -47,7 +48,7 @@ function EditCharacters(props){
 
                     {/* Submit Button */}
                     <Button type="submit">
-                        Edit {props.characterName ? props.characterName : "Anonymous" }
+                        Edit {state.characterName ? state.characterName : "Anonymous" }
                     </Button>
                 </Form>
             </Row>

@@ -23,8 +23,8 @@ class CharacterSelectScene extends Phaser.Scene{
 
         grabCharacters()
 
-        this.element.on('click', () => {
-
+        this.element.on('click', e => {
+            console.log('Clicking the Character ~> ', e)
             //// Adds the Game Scene to the current array.
             this.scene.add("TestScene", TestScene, true);
 
@@ -71,18 +71,14 @@ function grabCharacters(){
     if(userCharacters.length === 1){
         return(
             characterDiv.innerHTML = `
-            <div class='${userCharacters[0].id}'>
+            <div class='${userCharacters[0].id} characterContainer'>
                 <div class='characterSubContainer'>
-                    <h3 class='characterRow'>Name:</h3>
+                    <h1 class='characterRow' id='${userCharacters[0].name}'>Name:</h3>
                         <p>${userCharacters[0].name}</p></br>
-                    <h3 class='characterRow'>Level:</h3>
+                    <h2 class='characterRow' id='${userCharacters[0].level}'>Level:</h3>
                         <p>${userCharacters[0].level}</p></br>
-                    <h3 class='characterRow'>Physique:</h3>
+                    <h3 class='characterRow' id='${userCharacters[0].physique}'>Physique:</h3>
                         <p>${userCharacters[0].physique}</p>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </div>
             </div>
             `
