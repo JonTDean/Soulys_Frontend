@@ -36,12 +36,13 @@ export function handleLoginForm(e, state, login){
     })
     .then(resp => resp.json())
     .then(data => {
-        // console.log(`DATA:`, data)
+        console.log(`DATA:`, data)
         const { user, token } = data
         // SETS USER STATE
         login(user)
         // Saves Token to Local Storage
         localStorage.token = token;
+        
     })
 }
 
